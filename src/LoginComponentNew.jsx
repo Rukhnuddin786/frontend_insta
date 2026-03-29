@@ -12,9 +12,12 @@ const LoginComponentNew = ({ onLoginSuccess }) => {
   const [message, setMessage] = useState('')
   const [errors, setErrors] = useState({})
 
-  const API_URL = 'https://backendhackbackendhack2026-a39fb32cd-pharmacy-app.vercel.app/api/login'
+  const API_URL = process.env.NODE_ENV === 'development' 
+    ? 'http://localhost:3000/login'
+    : 'https://backendhackbackendhack2026.vercel.app/api/login'
 
   console.log('🔥 NEW COMPONENT - API URL:', API_URL)
+  console.log('🔥 Environment:', process.env.NODE_ENV)
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
