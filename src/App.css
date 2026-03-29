@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: url('https://picsum.photos/seed/instagram-bg/1920/1080.jpg') center center/cover no-repeat fixed;
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: -1;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box {
+  flex: 1;
+  display: flex;
+  max-width: 935px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+}
+
+.left-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 40px;
+}
+
+.logo-section {
+  text-align: center;
+  max-width: 400px;
+}
+
+.instagram-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 48px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.camera-icon {
+  font-size: 60px;
+  margin-right: 15px;
+}
+
+.tagline {
+  font-size: 16px;
+  color: #8e8e8e;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.image-collage {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.collage-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.img1 {
+  transform: rotate(-5deg);
+  background-image: url('https://picsum.photos/seed/insta1/120/120.jpg');
+}
+
+.img2 {
+  transform: rotate(3deg);
+  background-image: url('https://picsum.photos/seed/insta2/120/120.jpg');
+}
+
+.img3 {
+  transform: rotate(-2deg);
+  background-image: url('https://picsum.photos/seed/insta3/120/120.jpg');
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 350px;
+}
+
+.login-form {
+  background: white;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  padding: 20px 40px;
+  margin-bottom: 10px;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.instagram-logo-small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.camera-icon-small {
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  font-size: 12px;
+  background: #fafafa;
+}
+
+.login-form input:focus {
+  outline: none;
+  border: 1px solid #a0a0a0;
+  background: white;
+}
+
+.login-form input.error {
+  border: 1px solid #ed4956;
+  background: #fff5f5;
+}
+
+.login-form input.error:focus {
+  border: 1px solid #ed4956;
+}
+
+.error-message {
+  color: #ed4956;
+  font-size: 12px;
+  margin-top: -5px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.login-form button[type="submit"] {
+  width: 100%;
+  padding: 8px;
+  background: #0095f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.login-form button[type="submit"]:disabled {
+  background: #b2dffc;
+  cursor: not-allowed;
+}
+
+.login-form button[type="submit"]:hover:not(:disabled) {
+  background: #0081d6;
+}
+
+.message {
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.message:empty {
+  display: none;
+}
+
+.message:not(:empty) {
+  background: #e8f5e8;
+  color: #00a400;
+  border: 1px solid #00a400;
+}
+
+.form-links {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.forgot-password {
+  color: #00376b;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: #dbdbdb;
+}
+
+.divider span {
+  padding: 0 15px;
+  color: #8e8e8e;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.facebook-login {
+  width: 100%;
+  padding: 8px;
+  background: transparent;
+  color: #385185;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.facebook-login:hover {
+  background: #fafafa;
+}
+
+.facebook-icon {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.signup-link {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #dbdbdb;
+  margin-top: 10px;
+}
+
+.signup-link span {
+  color: #8e8e8e;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.signup-link a {
+  color: #0095f6;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.app-download {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.app-download p {
+  color: #8e8e8e;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.app-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.app-store, .google-play {
+  padding: 8px 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  background: white;
+  color: #385185;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.app-store:hover, .google-play:hover {
+  background: #fafafa;
+}
+
+.footer {
+  background: white;
+  border-top: 1px solid #dbdbdb;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  max-width: 935px;
+  margin: 0 auto;
+  padding: 0 20px 15px;
+}
+
+.footer-links a {
+  color: #8e8e8e;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-meta {
+  text-align: center;
+  color: #8e8e8e;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .login-box {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .left-panel {
+    display: none;
+  }
+  
+  .right-panel {
+    max-width: 100%;
+  }
+  
+  .login-form {
+    padding: 15px 20px;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
