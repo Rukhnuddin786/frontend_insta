@@ -10,7 +10,7 @@ const LoginComponent = ({ onLoginSuccess }) => {
   const [message, setMessage] = useState('')
   const [errors, setErrors] = useState({})
 
-  const API_URL = 'https://backendhackbackendhack2026-a39fb32cd-pharmacy-app.vercel.app'
+  const API_URL = 'https://backendhackbackendhack2026-a39fb32cd-pharmacy-app.vercel.app/api/login'
 
   console.log('FINAL DEPLOYMENT - API URL:', API_URL)
 
@@ -64,8 +64,8 @@ const LoginComponent = ({ onLoginSuccess }) => {
     setMessage('')
     
     try {
-      console.log('Sending request to:', `${API_URL}/login`)
-      const response = await axios.post(`${API_URL}/login`, {
+      console.log('Sending request to:', API_URL)
+      const response = await axios.post(API_URL, {
         username,
         password
       })
