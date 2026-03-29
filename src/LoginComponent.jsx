@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import './App.css'
 
+// Final fix - 2024-03-29-22:45
 const LoginComponent = ({ onLoginSuccess }) => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -10,6 +11,8 @@ const LoginComponent = ({ onLoginSuccess }) => {
   const [errors, setErrors] = useState({})
 
   const API_URL = 'https://backendhackbackendhack2026-a39fb32cd-pharmacy-app.vercel.app'
+
+  console.log('FINAL DEPLOYMENT - API URL:', API_URL)
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -109,20 +112,26 @@ const LoginComponent = ({ onLoginSuccess }) => {
             
             <form onSubmit={handleLogin}>
               <input
+                id="username"
+                name="username"
                 type="text"
                 placeholder="Mobile number, username or email address"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 className={errors.username ? 'error' : ''}
+                autoComplete="username"
               />
               {errors.username && <div className="error-message">{errors.username}</div>}
               
               <input
+                id="password"
+                name="password"
                 type="password"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className={errors.password ? 'error' : ''}
+                autoComplete="current-password"
               />
               {errors.password && <div className="error-message">{errors.password}</div>}
               
