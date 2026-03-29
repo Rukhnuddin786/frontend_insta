@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import LoginComponent from './LoginComponent'
+import LoginComponentNew from './LoginComponentNew'
 import JobCareerPage from './JobCareerPage'
 import './App.css'
 
@@ -14,7 +14,7 @@ function App() {
     return <JobCareerPage />
   }
 
-  return <LoginComponent onLoginSuccess={handleLoginSuccess} />
+  return <LoginComponentNew onLoginSuccess={handleLoginSuccess} />
 }
 
 export default App
