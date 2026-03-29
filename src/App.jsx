@@ -3,6 +3,7 @@ import axios from 'axios'
 import JobCareerPage from './JobCareerPage'
 import './App.css'
 
+// Version 2.0 - Fixed backend URL
 const App = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
