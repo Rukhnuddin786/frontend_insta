@@ -12,7 +12,7 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   const API_URL = process.env.NODE_ENV === 'production' 
-    ? 'https://REPLACE-WITH-YOUR-VERCEL-BACKEND-URL.vercel.app' 
+    ? 'https://backendhackbackendhack2026-a39fb32cd-pharmacy-app.vercel.app' 
     : 'http://localhost:3000'
 
   const validateEmail = (email) => {
