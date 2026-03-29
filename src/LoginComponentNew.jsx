@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import './App.css'
 
-// FINAL COMPONENT - 2024-03-29-22:51
+// FINAL COMPONENT - 2024-03-29-22:57 - CACHE BREAKER
 const LoginComponentNew = ({ onLoginSuccess }) => {
+  console.log('🔥 CACHE BREAKER - Component loaded at:', new Date().toISOString())
+  
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
