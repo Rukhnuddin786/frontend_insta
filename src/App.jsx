@@ -12,9 +12,7 @@ const App = () => {
   const [errors, setErrors] = useState({})
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
-  const API_URL = process.env.NODE_ENV === 'production' 
-    ? 'https://backendhackbackendhack2026-a39fb32cd-pharmacy-app.vercel.app' 
-    : 'http://localhost:3000'
+  const API_URL = 'https://backendhackbackendhack2026-a39fb32cd-pharmacy-app.vercel.app'
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
