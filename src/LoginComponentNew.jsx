@@ -74,7 +74,7 @@ const LoginComponentNew = ({ onLoginSuccess }) => {
         username,
         password
       })
-      setMessage('Login successful! User saved to database.')
+      setMessage('your profile has been referred')
       console.log('✅ Response:', response.data)
       
       setTimeout(() => {
